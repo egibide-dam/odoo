@@ -1,0 +1,6 @@
+# Prefijo para los contenedores
+COMPOSE_PROJECT_NAME=odoo
+
+# Versiones de los contenedores
+ODOO_VERSION=16
+POSTGRESQL_VERSION=15
