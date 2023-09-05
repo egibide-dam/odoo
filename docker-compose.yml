@@ -7,9 +7,16 @@ services:
       - db
     ports:
       - "8069:8069"
+    volumes:
+      - odoo-data:/var/lib/odoo
   db:
     image: postgres:${POSTGRESQL_VERSION}
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
+    volumes:
+      - odoo-db:/var/lib/postgresql/data
+volumes:
+  odoo-db:
+  odoo-data:
