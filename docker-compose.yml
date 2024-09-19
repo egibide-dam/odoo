@@ -1,7 +1,6 @@
 services:
   web:
     image: odoo:${ODOO_VERSION}
-    platform: linux/amd64
     depends_on:
       - db
     ports:
